@@ -1,0 +1,84 @@
+\documentclass[final,table,svgnames]{beamer}
+
+\usefonttheme{professionalfonts}
+\usefonttheme{serif} % default family is serif
+
+\setbeamercovered{dynamic}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{tikz}
+%\usepackage{marvosym}
+\usepackage{bbding}
+\usepackage{xcolor}
+\usepackage{doi}
+\usepackage{times}
+\usepackage{listings}
+
+\lstset{basicstyle=\tiny\color{gray},
+  showstringspaces=false,
+  commentstyle=\color{red},
+  frame=tb,    
+  keywordstyle=\color{blue}
+}
+
+% Python style for highlighting
+\lstset{
+language=Python,
+basicstyle=\tiny\color{gray},
+otherkeywords={self},             % Add keywords here
+keywordstyle=\bf\color{DarkBlue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\color{FireBrick},    % Custom highlighting style
+stringstyle=\color{DarkGreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}
+
+
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{setspace}
+\usepackage{menukeys} 
+
+\DeclareGraphicsExtensions{.pdf,.png,.PNG,.JPG,.jpg,.jpeg,.gif}
+\graphicspath{
+{./figures/}
+}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+\setbeamerfont{caption}{size=\scriptsize,family=\it}
+\setbeamertemplate{frametitle}{\insertframetitle\par\vskip-6pt\hrulefill}
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{subsection in toc}{\inserttocsectionnumber.\inserttocsubsectionnumber--~\inserttocsubsection\\}
+
+\usetikzlibrary{arrows,shapes,backgrounds}
+\tikzstyle{every picture}+=[remember picture]
+\tikzstyle{na} = [baseline=-.5ex]
+
+%--------------------------------
+\hypersetup{bookmarksopen=true,
+bookmarksnumbered=true,  
+pdffitwindow=true, 
+pdfstartview=Fit,
+%pdfpagemode=FullScreen,
+pdffitwindow=true,
+pdftoolbar=true,
+pdfmenubar=true,
+pdfwindowui=true,
+pdfsubject={CMEMS INSTAC Training},
+bookmarksopenlevel=3,
+bookmarksdepth=3,
+colorlinks=true,
+linkcolor=MediumSeaGreen,anchorcolor=MediumSeaGreen,%
+citecolor=DarkBlue,filecolor=black,%
+menucolor=DarkBlue,urlcolor=MediumSeaGreen
+}
+
+
+\urlstyle{rm}
+\setbeamercovered{invisible}
+\setbeamertemplate{items}[triangle] 
+\tikzset{>=stealth}
