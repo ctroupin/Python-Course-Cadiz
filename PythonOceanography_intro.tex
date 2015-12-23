@@ -44,18 +44,79 @@ Programming language:
 \begin{frame}
 \frametitle{Resources}
 
-\begin{enumerate}
+\onslide*<1>{
+Web:
+\begin{itemize}
 \item \url{https://docs.python.org/2.7/tutorial/index.html}
+\item \url{https://developers.google.com/edu/python/introduction?hl=en}
 \item \url{http://www.learnpython.org} \comment{online code execution}\\
 \url{https://pythonprogramming.net}
-\item \url{http://learnpythonthehardway.org/} \comment{not free}
-\item \url{https://www.gitbook.com/book/djangogirls/djangogirls-tutorial/details} 
-\end{enumerate}
+\item \url{https://www.gitbook.com/book/djangogirls/djangogirls-tutorial} 
+\end{itemize}
+}
+
+\onslide*<2>{
+Youtube:
+\begin{itemize}
+\item \href{https://www.youtube.com/watch?v=cpPG0bKHYKc}{Python Beginner Tutorial (For Absolute Beginners)}\comment{(4 parts)}
+\item \href{https://www.youtube.com/watch?v=tKTZoB2Vjuk}{Google Python Class Day 1 Part 1} \comment{kij,  }
+\item \href{https://www.youtube.com/watch?v=9uq3w6JJS00}{Zero to Hero with Python} \comment{(11 hours)}
+\end{itemize}
+}
+
+\onslide*<3>{
+Books:
+\begin{itemize}
+\item \textit{Learn Python the hard way}, Z.A.~Shaw, 2013\\
+\url{http://learnpythonthehardway.org/book/}
+\item \textit{Learning Python, 5th Edition}, M.~Lutz, 2013
+\item \textit{Python Programming: An Introduction to Computer Science}, J.M. Zelle, 2002 
+\end{itemize}
+
+\vspace{1cm}
+
+Complete list: \url{https://wiki.python.org/moin/PythonBooks}
+}
 
 \end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
-\begin{frame}
+\begin{frame}[fragile]
+\frametitle{Python vs. Matlab}
+\footnotesize
+
+\begin{table}
+\scriptsize
+\begin{tabular}{p{.4\textwidth}p{.4\textwidth}}
+\toprule
+Python  	  				& Matlab\\
+\midrule
+\textbf{General}			& \\
+programming language		& programming language + numerical computing environment\\
+open						& proprietary algorithms\\
+general purpose				& linear algebra\\
+\midrule
+\textbf{Indexing} 			& 	\\
+a[0]						& a(1) \\
+a[-1]						& a(end)\\
+a[::2]						& a(1:2:end)\\
+\midrule
+\textbf{Functions}			& \\
+a.max()						& max(a)\\
+a.shape()					& size(a)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vfill
+
+Numpy for Matlab users:\\
+\url{https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html}
+
+\end{frame}
+
+%--------------------------------------------------------------------------------------------------------------
+\begin{frame}[fragile]
 \frametitle{A few definitions}
 
 \begin{description}
@@ -78,6 +139,29 @@ Programming language:
 \begin{enumerate}
 \item 
 \end{enumerate}
+
+\end{frame}
+
+
+%--------------------------------------------------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Python 2 vs Python 3}
+
+Some differences:
+\begin{itemize}
+\item Print function
+\item Integer division
+\item Unicode
+\item \ldots
+\end{itemize}
+
+Python 3.x = present and future of the language
+
+\vfill
+
+More details:\\
+\href{https://wiki.python.org/moin/Python2orPython3}{Python 2 or Python 3}\\
+\href{https://jakevdp.github.io/blog/2013/01/03/will-scientists-ever-move-to-python-3/}{Will Scientists Ever Move to Python 3?}
 
 \end{frame}
 
