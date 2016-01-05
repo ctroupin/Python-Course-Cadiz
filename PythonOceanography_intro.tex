@@ -4,7 +4,8 @@
 
 \begin{frame}
 \frametitle{}
-
+\huge Introduction:\\
+What? Why? How?
 \end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
@@ -28,6 +29,9 @@ Programming language:
 
 \end{frame}
 
+% 1st example here with strings
+
+
 %--------------------------------------------------------------------------------------------------------------
 \begin{frame}
 \frametitle{Why Python?}
@@ -40,45 +44,6 @@ Programming language:
 
 \end{frame}
 
-%--------------------------------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Resources}
-
-\onslide*<1>{
-Web:
-\begin{itemize}
-\item \url{https://docs.python.org/2.7/tutorial/index.html}
-\item \url{https://developers.google.com/edu/python/introduction?hl=en}
-\item \url{http://www.learnpython.org} \comment{online code execution}\\
-\url{https://pythonprogramming.net}
-\item \url{https://www.gitbook.com/book/djangogirls/djangogirls-tutorial} 
-\end{itemize}
-}
-
-\onslide*<2>{
-Youtube:
-\begin{itemize}
-\item \href{https://www.youtube.com/watch?v=cpPG0bKHYKc}{Python Beginner Tutorial (For Absolute Beginners)}\comment{(4 parts)}
-\item \href{https://www.youtube.com/watch?v=tKTZoB2Vjuk}{Google Python Class Day 1 Part 1} \comment{kij,  }
-\item \href{https://www.youtube.com/watch?v=9uq3w6JJS00}{Zero to Hero with Python} \comment{(11 hours)}
-\end{itemize}
-}
-
-\onslide*<3>{
-Books:
-\begin{itemize}
-\item \textit{Learn Python the hard way}, Z.A.~Shaw, 2013\\
-\url{http://learnpythonthehardway.org/book/}
-\item \textit{Learning Python, 5th Edition}, M.~Lutz, 2013
-\item \textit{Python Programming: An Introduction to Computer Science}, J.M. Zelle, 2002 
-\end{itemize}
-
-\vspace{1cm}
-
-Complete list: \url{https://wiki.python.org/moin/PythonBooks}
-}
-
-\end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
 \begin{frame}[fragile]
@@ -115,6 +80,28 @@ Numpy for Matlab users:\\
 
 \end{frame}
 
+
+%--------------------------------------------------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Quick example}
+\huge
+
+\begin{lstlisting}[language=python]
+#!/usr/bin/python
+
+def hello():
+  print "Hello world"
+  return
+
+def main():
+  hello()
+
+if __name__ == '__main__':
+  main()
+\end{lstlisting}
+
+\end{frame}
+
 %--------------------------------------------------------------------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{A few definitions}
@@ -132,16 +119,47 @@ Numpy for Matlab users:\\
 
 \end{frame}
 
+
 %--------------------------------------------------------------------------------------------------------------
 \begin{frame}
-\frametitle{Quick example}
+\frametitle{Resources}
 
-\begin{enumerate}
-\item 
-\end{enumerate}
+\onslide*<1>{
+Web:
+\begin{itemize}
+\item \url{https://docs.python.org/2.7/tutorial/index.html}
+\item \url{https://developers.google.com/edu/python/introduction?hl=en} \comment{tutorial + exercises}
+\item \url{http://www.python-course.eu}
+\item \url{http://www.learnpython.org} \comment{online code execution}\\
+\url{https://pythonprogramming.net}
+\item \url{https://www.gitbook.com/book/djangogirls/djangogirls-tutorial} 
+\end{itemize}
+}
+
+\onslide*<2>{
+Youtube:
+\begin{itemize}
+\item \href{https://www.youtube.com/watch?v=cpPG0bKHYKc}{Python Beginner Tutorial (For Absolute Beginners)}\comment{(4 parts)}
+\item \href{https://www.youtube.com/watch?v=tKTZoB2Vjuk}{Google Python Class} \comment{7 $\times$ 30 minutes}
+\item \href{https://www.youtube.com/watch?v=9uq3w6JJS00}{Zero to Hero with Python} \comment{(11 hours)}
+\end{itemize}
+}
+
+\onslide*<3>{
+Books:
+\begin{itemize}
+\item \textit{Learn Python the hard way}, Z.A.~Shaw, 2013\\
+\url{http://learnpythonthehardway.org/book/}
+\item \textit{Learning Python, 5th Edition}, M.~Lutz, 2013
+\item \textit{Python Programming: An Introduction to Computer Science}, J.M. Zelle, 2002 
+\end{itemize}
+
+\vspace{1cm}
+
+Complete list: \url{https://wiki.python.org/moin/PythonBooks}
+}
 
 \end{frame}
-
 
 %--------------------------------------------------------------------------------------------------------------
 \begin{frame}[fragile]
@@ -168,4 +186,20 @@ More details:\\
 
 %--------------------------------------------------------------------------------------------------------------
 
+\begin{frame}[fragile]
+\frametitle{Objectives of the course}
+
+\begin{enumerate}
+\item<1-> Use Python to solve oceanography-related problems
+\item<2-> Read/write various types of files
+\item<3-> Generate high-quality figures
+\item<4-> Find resources on the internet for specific problems
+\end{enumerate}
+
+\vspace{.5cm}
+
+\onslide<5->{\textbf{What we won't (can't) do:}\\
+ teach you how to program}
+
+\end{frame}
 
