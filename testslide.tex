@@ -1,4 +1,4 @@
-\begin{frame}[t]
+\begin{frame}[t, fragile]
 \frametitle{Data types}
 
 \begin{enumerate}
@@ -9,28 +9,52 @@
 \item<5-> Dictionary
 \end{enumerate}
 
-Example:\\
-\onslide<1>{
-a = 10.34\\
+\onslide<1-5>{\textbf{Example:}}
+
+\begin{onlyenv}<1>
+\begin{lstlisting}[language=python]
+g = 9.81
 h = 4.135667662e-15
-}
+\end{lstlisting}
+\end{onlyenv}
 
-\onslide<2>{
-s = "this is a string"\\
-}
+\begin{onlyenv}<2>
+\begin{lstlisting}[language=python]
+name = "Rickman"
+s = "this is a string"
+\end{lstlisting}
+\end{onlyenv}
 
-\onslide<3>{
+\begin{onlyenv}<3>
+\begin{lstlisting}[language=python]
 list = ['one', 2, 'three', 'four', 5]
-}
-
-\onslide<4>{
-tuple = ('one', 2, 'three', 'four', 5)
-}
-
-\onslide<5>{
-email = {'Evan': 'emason@imedea.uib-csic.es', 'Irene': 'irene.laiz@uca.es', 'Charles': 'ctroupin@socib.es}
-}
+\end{lstlisting}
+\end{onlyenv}
 
 
+\begin{onlyenv}<4>
+\begin{lstlisting}[language=python]
+tuple1 = ('one', 2, 'three', 'four', 5)
+tuple2 = (1, '1', 'one', [1, 2], (1, 2, 3))
+\end{lstlisting}
+
+Tuples are \textit{immutable} \comment{(fixed value)}
+\end{onlyenv}
+
+
+\begin{onlyenv}<5>
+\begin{lstlisting}[language=python]
+email = {'Evan': 'emason@imedea.uib-csic.es',\
+         'Irene': 'irene.laiz@uca.es',\
+         'Charles': 'ctroupin@socib.es'}
+email['Irene']
+'irene.laiz@uca.es'
+\end{lstlisting}
+\end{onlyenv}
+
+\begin{onlyenv}<6>
+More details:\\
+\url{https://docs.python.org/2/tutorial/datastructures.html#}
+\end{onlyenv}
 
 \end{frame}

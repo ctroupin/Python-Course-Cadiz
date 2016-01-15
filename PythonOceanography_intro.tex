@@ -82,12 +82,14 @@ Numpy for Matlab users:\\
 
 
 %--------------------------------------------------------------------------------------------------------------
-\begin{frame}[fragile]
+\begin{frame}[t, fragile]
 \frametitle{Quick example: hello.py}
 \huge
 
 \faLaptop
 
+
+\begin{onlyenv}<2>
 \begin{lstlisting}[language=python]
 #!/usr/bin/python
 
@@ -102,6 +104,7 @@ if __name__ == '__main__':
   main()
 \end{lstlisting}
 
+\end{onlyenv}
 \end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
@@ -121,6 +124,68 @@ if __name__ == '__main__':
 
 \end{frame}
 
+%--------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[t, fragile]
+\frametitle{Data types}
+
+\begin{enumerate}
+\item<1-> Numbers
+\item<2-> String
+\item<3-> List
+\item<4-> Tuple
+\item<5-> Dictionary
+\end{enumerate}
+
+\onslide<1-5>{\textbf{Example:}}
+
+\begin{onlyenv}<1>
+\begin{lstlisting}[language=python]
+g = 9.81
+h = 4.135667662e-15
+\end{lstlisting}
+\end{onlyenv}
+
+\begin{onlyenv}<2>
+\begin{lstlisting}[language=python]
+name = "Rickman"
+s = "this is a string"
+\end{lstlisting}
+\end{onlyenv}
+
+\begin{onlyenv}<3>
+\begin{lstlisting}[language=python]
+list = ['one', 2, 'three', 'four', 5]
+\end{lstlisting}
+\end{onlyenv}
+
+
+\begin{onlyenv}<4>
+\begin{lstlisting}[language=python]
+tuple1 = ('one', 2, 'three', 'four', 5)
+tuple2 = (1, '1', 'one', [1, 2], (1, 2, 3))
+\end{lstlisting}
+
+Tuples are \textit{immutable} \comment{(fixed value)}
+\end{onlyenv}
+
+
+\begin{onlyenv}<5>
+\begin{lstlisting}[language=python]
+email = {'Evan': 'emason@imedea.uib-csic.es',\
+         'Irene': 'irene.laiz@uca.es',\
+         'Charles': 'ctroupin@socib.es'}
+email['Irene']
+'irene.laiz@uca.es'
+\end{lstlisting}
+\end{onlyenv}
+
+\begin{onlyenv}<6>
+More details:\\
+\url{https://docs.python.org/2/tutorial/datastructures.html#}
+\end{onlyenv}
+
+\end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
 \begin{frame}
