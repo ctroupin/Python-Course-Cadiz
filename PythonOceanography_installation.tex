@@ -1,4 +1,14 @@
-\section{Installation and update}
+\section{Installation, update, use}
+
+{\setbeamercolor{background canvas}{bg=LemonChiffon}
+\begin{frame}
+\frametitle{}
+{\fontsize{50}{60}\selectfont Installation\\
+ \& use} 
+
+\end{frame}
+}
+
 
 \subsection{Installing}
 
@@ -42,13 +52,13 @@ use Scientific Python distribution
 \item<3->[Intermediate:] Linux, Mac: install package\\
 \begin{itemize}
 \item Linux: package manager
-\item Mac: MacPorts % used by Evan
+\item Mac: \href{https://www.macports.org/}{MacPorts}
 \end{itemize}
 \item<4->[Harder:] build from source
 \begin{lstlisting}[language=bash]
  $ python setup.py install
 \end{lstlisting}
-\item<5->[Better:] pip
+\item<5->[Better:] pip (\url{https://pypi.python.org/pypi/pip})
 \end{description}
 
 \end{frame}
@@ -96,43 +106,6 @@ $ pip install 'Package>=x.y.z'
 \begin{frame}[t, fragile]
 \frametitle{More about \texttt{pip}}
 
-\defverbatim{\piplist}{%
-\tiny
-\begin{verbatim}
-aptoncd (0.1.98-bzr117-1.2)
-backports.ssl-match-hostname (3.4.0.2)
-basemap (1.0.7)
-...
-xhtml2pdf (0.0.6)
-zope.interface (3.6.1)
-\end{verbatim}
-}
-
-\defverbatim{\pipfreeze}{%
-\tiny
-\begin{verbatim}
-aptoncd===0.1.98-bzr117-1.2
-backports.ssl-match-hostname==3.4.0.2
-basemap==1.0.7
-
-...
-xhtml2pdf==0.0.6
-zope.interface==3.6.1
-\end{verbatim}
-}
-
-\defverbatim{\pipshow}{%
-\tiny
-\begin{verbatim}
-%---
-%Metadata-Version: 1.1
-%Name: numpy
-%Version: 1.9.2
-%Summary: NumPy: array processing for numbers, strings, records, and objects.
-...
-%Requires:
-\end{verbatim}
-}
 
 \begin{itemize}
 \item<1-> Uninstall packages:                   
@@ -143,17 +116,55 @@ $ pip uninstall
 \begin{lstlisting}[language=bash]
 $ pip list
 \end{lstlisting}
-\onslide*<2>{\tiny \piplist}
+
+\begin{onlyenv}<2>
+\tiny
+\begin{lstlisting}[language=bash]
+aptoncd (0.1.98-bzr117-1.2)
+backports.ssl-match-hostname (3.4.0.2)
+basemap (1.0.7)
+...
+xhtml2pdf (0.0.6)
+zope.interface (3.6.1)
+\end{lstlisting}
+\end{onlyenv}
+
+
 \item<3-> Output installed packages in requirements format:
 \begin{lstlisting}[language=bash]
 $ pip freeze
 \end{lstlisting}
-\onslide*<3>{\pipfreeze}
+
+\begin{onlyenv}<3>
+\tiny
+\begin{lstlisting}[language=bash]
+aptoncd===0.1.98-bzr117-1.2
+backports.ssl-match-hostname==3.4.0.2
+basemap==1.0.7
+
+...
+xhtml2pdf==0.0.6
+zope.interface==3.6.1
+\end{lstlisting}
+\end{onlyenv}
+
 \item<4-> Show information about installed packages:
 \begin{lstlisting}[language=bash]
 $ pip show Package
 \end{lstlisting}
-\onslide*<4>{\pipshow}
+
+\begin{onlyenv}<4>
+\tiny
+\begin{lstlisting}[language=bash]
+Metadata-Version: 1.1
+Name: numpy
+Version: 1.9.2
+Summary: NumPy: array processing for numbers, strings, ...
+...
+Requires:
+\end{lstlisting}
+\end{onlyenv}
+
 \end{itemize}
 
 \end{frame}
@@ -169,11 +180,11 @@ $ pip show Package
 
 %--------------------------------------------------------------------------------------------------------------
 \subsection{Running your code}
-\begin{frame}[fragile, t]
+\begin{frame}[fragile, c]
 \frametitle{Running your code: several solutions}
 
-\begin{enumerate}
-\item<1-> Edit, then run in a shell:
+\begin{onlyenv}<1> 
+Edit, then run in a shell:
 \begin{lstlisting}[language=bash]
 $ python mycode.py
 \end{lstlisting}
@@ -181,18 +192,67 @@ or
 \begin{lstlisting}[language=bash]
 $ mycode.py
 \end{lstlisting}
+if you the \textit{shebang}\\
+ \verb|#!/usr/bin/python| \\
+ is present at the 1st line
+\end{onlyenv}
+
+\begin{onlyenv}<2> 
+Interactive python (\href{http://ipython.org/}{ipython})
+
+Auto-completion, exploring objects, \ldots
+
+\begin{lstlisting}[language=bash]
+In [2]: string = 'Hello all'
+
+In [3]: string.
+string.capitalize  string.encode      string.format      ...
+string.rstrip      string.strip       string.upper       
+... 
+string.startswith  string.translate   
+\end{lstlisting}
+
++ \textit{magic} functions:
+
+{\footnotesize
+\begin{itemize}
+\item[] \verb|%run|: Run the named file inside IPython as a program\\
+\item[] \verb|%timeit|: Time execution of a Python statement or expression\\
+\item[] \verb|%who|: Print all interactive variables, with some minimal formatting
+\end{itemize}
+}
+\vfill
+
+More: \href{http://ipython.readthedocs.org/en/stable/interactive/magics.html?highlight=magic#built-in-magic-commands}{Built-in magic commands}
+\end{onlyenv}
 
 % Add ipython + magic functions + autocomplete etc
 
+\begin{onlyenv}<3> 
+\textit{Integrated Development Environment} (IDE)\\
+(editor + build automation tools + debugger)
 
-\item<2-> Use an \textit{Integrated Development Environment} (IDE)\\
-(editor + build automation tools + debugger):\\
-Atom, Eclipse, PyCharm, Idle, \ldots\\
+\vfill
+\includegraphics[width=.7\textwidth]{python_pycharm}
+\vfill
+
+\textbf{Examples:} Atom, Eclipse, PyCharm, Idle, \ldots\\
 Complete list: \url{https://wiki.python.org/moin/PythonEditors}
-\item<3-> Write an \textit{ipython notebook}\\
-(interactive computational environment):\\
-\url{http://ipython.org/notebook.html} \comment{(see Programming in Python 2)}
-\end{enumerate}
+\end{onlyenv}
+
+\begin{onlyenv}<4>
+\href{http://ipython.org/notebook.html}{\textit{ipython notebook}}\\
+(interactive computational environment)
+
+\vfill
+\includegraphics[width=.7\textwidth]{notebook_insitu0}
+\vfill
+
+Rich text + command executions + figures + \ldots
+
+"\textit{Data story telling}"
+\comment{(see Programming in Python 2)}
+\end{onlyenv}
 
 \end{frame}
 
@@ -200,10 +260,9 @@ Complete list: \url{https://wiki.python.org/moin/PythonEditors}
 \begin{frame}[c]
 \frametitle{What do we work with?}
 \huge
-\faLaptop~examples\ldots
+\faLaptop
 
 \vfill 
-\includegraphics[width=.45\textwidth]{python_idle}~~\includegraphics[width=.45\textwidth]{python_pycharm}
 
 % Here we will say what we use personaly, type of workflow etc
 \end{frame}

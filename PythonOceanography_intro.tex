@@ -1,12 +1,14 @@
 \section{Introduction}
 %----------------------
 
-
+{\setbeamercolor{background canvas}{bg=LemonChiffon}
 \begin{frame}
 \frametitle{}
-\huge Introduction:\\
-What? Why? How?
+{\fontsize{50}{60}\selectfont Introduction:}
+{\huge What? Why? How?} 
+
 \end{frame}
+}
 
 %--------------------------------------------------------------------------------------------------------------
 \begin{frame}
@@ -15,9 +17,10 @@ What? Why? How?
 Programming language:
 \begin{enumerate}
 \item interpreted \comment{instructions executed directly}
+\item dynamically typed \comment{type checking at run-time}
 \item object-oriented \comment{classes, objects, methods, \ldots}
 \item high-level \comment{strong abstraction}
-\item simple, easy to learn syntax
+%\item simple, easy to learn syntax
 \end{enumerate}
 
 \vfill
@@ -33,19 +36,27 @@ Programming language:
 
 
 %--------------------------------------------------------------------------------------------------------------
-\begin{frame}
+\begin{frame}[c]
 \frametitle{Why Python?}
 
+\onslide*<1>{
 \begin{enumerate}
 \item Simple, easy to learn syntax
 \item Open
 \item Large user community \comment{doc, support, packages}
 \end{enumerate}
+}
 
+\onslide*<2>{
+\includegraphics[width=.8\textwidth]{langpop_corger_nl}\\
+{\scriptsize Source: \url{http://langpop.corger.nl/}}
+}
 \end{frame}
 
 
 %--------------------------------------------------------------------------------------------------------------
+\subsection{Python vs. Matlab}
+
 \begin{frame}[fragile]
 \frametitle{Python vs. Matlab}
 \footnotesize
@@ -105,9 +116,11 @@ if __name__ == '__main__':
 \end{lstlisting}
 
 \end{onlyenv}
+
 \end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
+\subsection{Definitions and data types}
 \begin{frame}[fragile]
 \frametitle{A few definitions}
 
@@ -188,6 +201,7 @@ More details:\\
 \end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
+\subsection{Resources, tutorials, books}
 \begin{frame}
 \frametitle{Resources}
 
@@ -345,9 +359,11 @@ Head of \href{http://socib.es/}{SOCIB} Data Center\\
 
 \faLaptop
 
-When you run the code, the question "\textit{what's your name}" (or anything else) is asked to the user.
+When you run the code, the question "\textit{what's your name}"\\
+(or anything else) is asked to the user.
 
-Once the name is entered, the sentence "\textit{Hello + name}" is printed.
+Once the name is entered, \\
+the sentence "\textit{Hello + name}" is printed.
 
 
 \end{frame}

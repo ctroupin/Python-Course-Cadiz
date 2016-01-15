@@ -17,6 +17,7 @@
 \usepackage{times}
 \usepackage{listings}
 \usepackage{fontawesome}
+\usepackage[yyyymmdd,hhmmss]{datetime}
 
 \lstset{basicstyle=\tiny\color{DarkSlateGray},
   showstringspaces=false,
@@ -39,14 +40,14 @@
 % Python style for highlighting
 \lstset{
 language=Python,
-basicstyle=\footnotesize\color{DarkSlateGray},
+basicstyle=\scriptsize\color{DarkSlateGray},
 otherkeywords={self},             % Add keywords here
 keywordstyle=\bf\color{DarkBlue},
 emph={MyClass,__init__},          % Custom highlighting
 emphstyle=\color{FireBrick},      % Custom highlighting style
 stringstyle=\color{DarkGreen},
 frame=tb,                         % Any extra options here
-backgroundcolor=\color{MintCream}, 
+backgroundcolor=\color{Seashell}, 
 showstringspaces=false            % 
 }
 
@@ -103,6 +104,6 @@ menucolor=DarkBlue,urlcolor=MediumSeaGreen
 \setbeamertemplate{items}[triangle] 
 \tikzset{>=stealth}
 
-\newcommand{\comment}[1]{\hfill\textcolor{gray}{#1}}
+\newcommand{\comment}[1]{\hfill{\scriptsize\textcolor{gray}{#1}}}
 \newcommand{\pyfile}[1]{\texttt{#1}}
 \newcommand{\homepage}{\faHome~}
