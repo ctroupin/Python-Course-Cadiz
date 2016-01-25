@@ -3,8 +3,9 @@
 {\setbeamercolor{background canvas}{bg=LemonChiffon}
 \begin{frame}
 \frametitle{}
-{\fontsize{50}{60}\selectfont Programming in Python \#1:\\
-importing/exporting data} 
+{\fontsize{40}{50}\selectfont Programming in Python \#1} 
+
+{\huge importing/exporting data} 
 
 \end{frame}
 }
@@ -26,6 +27,8 @@ Images (geotiff)\\
 matlab files\\
 \ldots
 }
+\vfill 
+\onslide<3->{Be able to find the resources to read another format}
 
 \end{frame}
 
@@ -62,7 +65,8 @@ matlab files\\
 \item User-friendly
 \item Free, easy to write, easy to read
 \item Code and results visible online via \url{http://nbviewer.ipython.org}
-\item<2-> Data story-telling
+\item[]
+\item<2-> \textit{Data story-telling}
 \end{itemize}
 
 \end{frame}
@@ -140,6 +144,8 @@ matlab files\\
 \frametitle{Simple 2-column text file}
 Use file \pyfile{depth\_temperature1.dat}
 
+
+\exercise \verb|read_textfile.py|  
 \end{frame}
 
 
@@ -180,6 +186,11 @@ csvfile.close()
 \end{lstlisting}
 \end{itemize}
 
+\vfill
+
+\begin{onlyenv}<5>
+\notebook \verb|read_csv_file.ipynb|
+\end{onlyenv}
 \end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
@@ -205,19 +216,19 @@ Example: file \pyfile{dsb01.cnv}
 \end{onlyenv}
 
 \begin{itemize}
-\item<2-6> Type "python read cnv file" in search engine
-\item<3-6> Result: \url{https://pypi.python.org/pypi/cnv}\\
+\item<2-7> Type "python read cnv file" in search engine
+\item<3-7> Result: \url{https://pypi.python.org/pypi/cnv}\\
 {\tiny\it "Sorry for the inconvenience, but I moved all the functionalities into the package seabird"}
-\item<4-6> Use pip to search for the package
+\item<4-7> Use pip to search for the package
 \begin{lstlisting}[language=bash,basicstyle=\tiny]
 pip search seabird
 seabird     - Non official parser for Sea-Bird's sensors.
 \end{lstlisting}
-\item<5-6> Install package:
+\item<5-7> Install package:
 \begin{lstlisting}[language=bash,basicstyle=\tiny]
 pip install --user seabird==0.6.3
 \end{lstlisting}
-\item<6> From the doc:
+\item<6-7> From the doc:
 \begin{lstlisting}[language=python,basicstyle=\tiny]
 from seabird.cnv import fCNV
 profile = fCNV('')
@@ -226,6 +237,11 @@ profile.keys()		# It will list the available variables.
 profile['TEMP']   	# Get the data
 \end{lstlisting}
 \end{itemize}
+
+\vfill 
+\begin{onlyenv}<7>
+\notebook \verb|read_cnv_file.ipynb|
+\end{onlyenv}
 
 \end{frame}
 
@@ -350,7 +366,7 @@ profile['TEMP']   	# Get the data
 
 \begin{description}
 \item[\homepage] {\scriptsize \url{https://www.unidata.ucar.edu/software/netcdf/docs/netcdf/ncdump.html}}
-\item[What it is doing] text representation of a netCDF dataset (header information, variables, \ldots)
+\item[\tool] text representation of a netCDF dataset (header information, variables, \ldots)
 \end{description}
 
 \vfill
@@ -390,7 +406,7 @@ variables:
 
 \begin{description}
 \item[\homepage] {\scriptsize \url{http://www.ferret.noaa.gov/Ferret/}}
-\item[What it is doing] visualization and analysis environment
+\item[\tool] visualization and analysis environment
 \end{description}
 
 \vfill
@@ -424,7 +440,7 @@ yes?
 
 \begin{description}
 \item[\homepage] {\scriptsize \url{http://meteora.ucsd.edu/~pierce/ncview_home_page.html}}
-\item[What it is doing] quick visualisation of 3-4D fields
+\item[\tool] quick visualisation of 3-4D fields
 \end{description}
 
 \vfill
@@ -441,7 +457,7 @@ yes?
 
 \begin{description}
 \item[\homepage] {\scriptsize \url{http://www.epic.noaa.gov/java/ncBrowse/}}
-\item[What it is doing] interactive graphical display
+\item[\tool] interactive graphical display
 \end{description}
 
 \vfill
@@ -457,7 +473,7 @@ yes?
 
 \begin{description}
 \item[\homepage] {\scriptsize\url{http://www.giss.nasa.gov/tools/panoply/}}
-\item[What it is doing] plot, slice, combine, overlay, \ldots
+\item[\tool] plot, slice, combine, overlay, \ldots
 \end{description}
 
 \vfill
@@ -477,7 +493,7 @@ yes?
 
 \begin{description}
 \item[\homepage] \url{https://code.zmaw.de/projects/cdo}
-\item[What it is doing] manipulate (merging, averaging) netCDF files (+other formats)
+\item[\tool] manipulate (merging, averaging) netCDF files (+other formats)
 \item[Examples:] 
 \begin{itemize}
 \item Basic info (min, max, avg, size, \ldots):
@@ -502,7 +518,7 @@ cdo fldstd input.nc output.nc
 
 \begin{description}
 \item[\homepage] \url{http://nco.sourceforge.net/}
-\item[What it is doing] command line operations on netCDF files
+\item[\tool] command line operations on netCDF files
 \item[Examples:] \begin{itemize}
 \item Average variable over domain:
 \begin{lstlisting}[language=bash,basicstyle=\tiny]
@@ -526,7 +542,7 @@ input.nc output.nc
 
 \begin{description}
 \item[\homepage] \url{http://odv.awi.de/en/home/}
-\item[What it is doing] interactive exploration, analysis and visualization of oceanographic data
+\item[\tool] interactive exploration, analysis and visualization of oceanographic data
 \end{description}
 
 \includegraphics[height=.45\textheight]{odv_chloro1}
@@ -593,4 +609,33 @@ nc.close()
 
 
 %--------------------------------------------------------------------------------------------------------------
+\begin{frame}[c, fragile]
+\frametitle{List of notebooks}
+
+Located in \verb|Data_ReadWrite|
+
+
+{
+\scriptsize
+\begin{description}
+\item[read\_csv\_file.ipynb:] Comma separated values
+\item[read\_cnv\_file.ipynb:] SeaBird CTD file
+\item[]
+\item[read\_netcdf\_local.ipynb:] local \href{http://www.unidata.ucar.edu/software/netcdf/}{netCDF} file
+\item[read\_netcdf\_opendap.ipynb:] netCDF on \href{http://www.unidata.ucar.edu/software/thredds/current/tds/}{thredds data server}
+\item[read\_netcdf\_cf.ipynb:] netCDF using \href{http://cfconventions.org/}{CF conventions}
+\item[read\_shapefile.ipynb:] geospatial vector data
+\item[]
+\item[read\_geotiff.ipynb:] geotiff image
+\item[read\_image.ipynb:] jpg image
+\item[]
+\item[read\_HDF\_file.ipynb:] Hierarchical Data Format
+\item[read\_mat\_file.ipynb:] .mat file
+
+
+\end{description}
+}
+
+
+\end{frame}
 
