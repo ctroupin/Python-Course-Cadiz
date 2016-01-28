@@ -48,7 +48,7 @@ Programming language:
 }
 
 \onslide*<2>{
-\includegraphics[width=.8\textwidth]{langpop_corger_nl}\\
+\includegraphics[width=.9\textwidth]{langpop_corger_nl}\\
 {\scriptsize Source: \url{http://langpop.corger.nl/}}
 }
 \end{frame}
@@ -103,6 +103,10 @@ Numpy for Matlab users:\\
 \begin{onlyenv}<2>
 \begin{lstlisting}[language=python]
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
+'''
+This function prints "Hello world"
+'''
 
 def hello():
   print "Hello world"
@@ -114,9 +118,20 @@ def main():
 if __name__ == '__main__':
   main()
 \end{lstlisting}
-
 \end{onlyenv}
 
+\begin{enumerate}
+\item<3-> Try to document you code
+\item<4-> Use 
+\begin{lstlisting}[language=python]
+# -*- coding: utf-8 -*- 
+\end{lstlisting}
+if you're using non-ascii characters
+\item<5-> In Python~3: 
+\begin{lstlisting}[language=python]
+print("Hello world!")
+\end{lstlisting}
+\end{enumerate}
 \end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
@@ -196,6 +211,10 @@ email['Irene']
 \begin{onlyenv}<6>
 More details:\\
 \url{https://docs.python.org/2/tutorial/datastructures.html#}
+
+\vspace{1cm}
+
+\faLaptop
 \end{onlyenv}
 
 \end{frame}
@@ -231,7 +250,7 @@ Learn Object-Oriented Programming} \comment{(7 weeks)}
 Youtube:
 \begin{itemize}
 \item \href{https://www.youtube.com/watch?v=cpPG0bKHYKc}{Python Beginner Tutorial (For Absolute Beginners)}\comment{(4 parts)}
-\item \href{https://www.youtube.com/watch?v=tKTZoB2Vjuk}{Google Python Class} \comment{7 $\times$ 30 minutes}
+\item \href{https://www.youtube.com/watch?v=tKTZoB2Vjuk}{Google Python Class} \comment{(7 $\times$ 30 minutes)}
 \item \href{https://www.youtube.com/watch?v=9uq3w6JJS00}{Zero to Hero with Python} \comment{(11 hours)}
 \end{itemize}
 }
@@ -300,8 +319,6 @@ More details:\\
 \frametitle{About the trainers}
 
 
-\begin{columns}[c]
-\begin{column}{.55\linewidth}
 % maybe add pictures
 \onslide<1->{\textbf{Evan Mason}\\
 Oceanographer\\
@@ -317,18 +334,7 @@ Engineer, oceanographer\\
 Head of \href{http://socib.es/}{SOCIB} Data Center\\
 2.5-year experience with Python
 }
-\end{column}\begin{column}{.45\linewidth}
 
-\onslide<1>{
-% add picture
-}
-
-\onslide<2>{
-% add picture
-}
-
-\end{column}
-\end{columns}
 
 
 \end{frame}
@@ -348,22 +354,6 @@ Head of \href{http://socib.es/}{SOCIB} Data Center\\
 \vspace{1cm}
 
 \includegraphics<1->[height=1.5cm]{python_idle2}~\includegraphics<2->[height=1.5cm]{IR_TS_MO_61198_monthly}~\includegraphics<3->[height=1.5cm]{anomalies_10profiler-glider_201507}~\includegraphics<4->[height=1.5cm]{eddy_tracking_ex}
-
-
-\end{frame}
-
-%--------------------------------------------------------------------------------------------------------------
-
-\begin{frame}[c]
-\frametitle{Exercise 1: hello}
-
-\faLaptop
-
-When you run the code, the question "\textit{what's your name}"\\
-(or anything else) is asked to the user.
-
-Once the name is entered, \\
-the sentence "\textit{Hello + name}" is printed.
 
 
 \end{frame}

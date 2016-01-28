@@ -1,6 +1,6 @@
 \section{Time series}
 
-{\setbeamercolor{background canvas}{bg=LemonChiffon}
+{\setbeamercolor{background canvas}{bg=LightGreen}
 \begin{frame}
 \frametitle{}
 {\fontsize{40}{50}\selectfont Programming in Python \#2} 
@@ -11,13 +11,24 @@
 }
 
 %--------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Useful packages}
+
+\begin{description}
+\item<1->[NumPy:] package for scientific computing \url{http://www.numpy.org/}
+\item<1->[SciPy:] open-source software for mathematics, science, and engineering \url{http://www.scipy.org/}
+\item<2->[matplotlib:] 2D plotting library which produces publication quality figures \url{http://matplotlib.org/}
+\end{description}
+\end{frame}
+
+%--------------------------------------------------------------------------------------------------------------
 
 \begin{frame}[c, fragile]
 \frametitle{List of notebooks}
 
 Located in \verb|Plotting|
-{
-\scriptsize
+
+{\scriptsize
 \begin{description}
 \item[plot\_line.ipynb:] simple line plots and configuration
 \item[plot\_subfigure.ipynb:] organizing plots in sub-figures
@@ -29,7 +40,7 @@ Located in \verb|Plotting|
 }
 
 \begin{figure}
-\includegraphics[height=2.5cm]{scatter_chloro}~\includegraphics[height=2.5cm]{scatter_chloro}
+\includegraphics[height=3cm]{plot_line}~\includegraphics[height=3cm]{scatter_chloro}
 \end{figure}
 
 \end{frame}

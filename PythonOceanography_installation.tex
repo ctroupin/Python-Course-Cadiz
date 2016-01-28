@@ -192,9 +192,11 @@ or
 \begin{lstlisting}[language=bash]
 $ mycode.py
 \end{lstlisting}
-if you the \textit{shebang}\\
- \verb|#!/usr/bin/python| \\
- is present at the 1st line
+if \textit{shebang}
+\begin{lstlisting}[language=python]
+#!/usr/bin/python
+\end{lstlisting}
+is present at the 1st line
 \end{onlyenv}
 
 \begin{onlyenv}<2> 
@@ -266,3 +268,28 @@ Rich text + command executions + figures + \ldots
 
 % Here we will say what we use personaly, type of workflow etc
 \end{frame}
+
+%--------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[c, fragile]
+\frametitle{Exercise 1: changecase.py}
+
+\exercise
+
+Write a program that takes 2 arguments: the name and the surname, both written with a mix of upper and lowercase, and return the name with the first letter in uppercase and the surname with all the letters in uppercase.
+
+\textbf{Examples:}
+
+\textit{changecase allan rickman} \hspace{1cm} returns \hspace{1cm}  \textit{Allan RICKMAN} \\
+\textit{changecase aLlAn ricKmaN} \hspace{1cm} returns \hspace{1cm}  \textit{Allan RICKMAN} 
+
+\vspace{1cm}
+
+\textbf{Tips:} use the function \href{https://docs.python.org/2/library/sys.html#sys.argv}{sys.argv} to be able to run the code as 
+\begin{lstlisting}[language=bash]
+$ changecase name surname
+\end{lstlisting}
+
+
+\end{frame}
+
