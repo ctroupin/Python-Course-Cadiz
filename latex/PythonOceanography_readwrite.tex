@@ -10,6 +10,8 @@
 \end{frame}
 }
 
+
+
 %--------------------------------------------------------------------------------------------------------------
 \begin{frame}
 \frametitle{Objective}
@@ -126,27 +128,6 @@ matlab files\\
 
 \end{frame}
 
-%--------------------------------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Useful packages}
-
-\begin{description}
-\item<1->[NumPy:] package for scientific computing \url{http://www.numpy.org/}
-\item<2->[SciPy:] open-source software for mathematics, science, and engineering \url{http://www.scipy.org/}
-
-\end{description}
-\end{frame}
-
-%--------------------------------------------------------------------------------------------------------------
-\subsection{Plain text files}
-%--------------------------------------------------------------------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{Simple 2-column text file}
-Use file \pyfile{depth\_temperature1.dat}
-
-
-\exercise \verb|read_textfile.py|  
-\end{frame}
 
 
 %--------------------------------------------------------------------------------------------------------------
@@ -337,6 +318,65 @@ profile['TEMP']   	# Get the data
 %\end{onlyenv}
 %
 %\end{frame}
+
+\subsection{A few words about github}
+
+\begin{frame}[fragile]
+\frametitle{How to get code from github}
+
+\url{https://github.com/ctroupin/PythonCourseCadiz2016}
+
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=.85\textwidth]{pythongithub}};
+    \begin{scope}[x={(image.south east)},y={(image.north west)}]
+		\path (.9,.6) coordinate (DownloadZIP);
+		\path (.7,.6) coordinate (clone);
+%		\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+%		\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+%		\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+    \end{scope}  
+     
+\end{tikzpicture}
+
+\onslide<2->{\tikz[na] \coordinate (DownloadZIP2); Click and download the \texttt{.zip} file or \ldots}
+
+\onslide<3->{\tikz[na] \coordinate (clone2); Copy the URL and type \texttt{|clone url} in a terminal}
+
+
+\begin{tikzpicture}[overlay]
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+	\onslide<2>{\path[*-stealth,arrowcolor,thin,opacity=0.25] (DownloadZIP) edge [out=-90, in=180] (DownloadZIP2);}
+	\onslide<3>{\path[*-stealth,arrowcolor,thin,opacity=0.25] (clone) edge [out=-90, in=180] (clone2);}
+\end{scope}
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Update the code}
+
+\begin{enumerate}
+\item<1-> Clone the repository 
+
+\begin{lstlisting}[language=bash]
+git clone https://github.com/... .git
+\end{lstlisting}
+
+\item<2-> \faHourglass3 \comment{(if there were modifications in the repository)}
+
+\item<3-> Update your version 
+
+\begin{lstlisting}[language=bash]
+git pull 
+\end{lstlisting}
+\end{enumerate}
+
+\onslide<4->{More about github:
+\begin{itemize}
+\item \url{https://github.com/}
+\item \url{http://rogerdudler.github.io/git-guide/}}
+\end{itemize} 
+\end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
 \subsection{NetCDF file}
