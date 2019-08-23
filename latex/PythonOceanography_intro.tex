@@ -14,13 +14,12 @@
 \begin{frame}
 \frametitle{What is Python?}
 
-Programming language:
+Programming language (1st release: 1991):
 \begin{enumerate}
 \item interpreted \comment{instructions executed directly}
 \item dynamically typed \comment{type checking at run-time}
 \item object-oriented \comment{classes, objects, methods, \ldots}
 \item high-level \comment{strong abstraction}
-%\item simple, easy to learn syntax
 \end{enumerate}
 
 \vfill
@@ -37,35 +36,50 @@ Programming language:
 
 %--------------------------------------------------------------------------------------------------------------
 \begin{frame}[c]
-\frametitle{Why Python?}
+\frametitle{Why use Python?}
 
 \onslide*<1>{
 \begin{enumerate}
 \item Simple, easy to learn syntax
-\item Open
-\item Large user community \comment{doc, support, packages}
+\item Multi-purpose language
+\item Large user community,\\ 
+including Ocean Sciences\comment{doc, support, packages}
 \end{enumerate}
 }
 
 \onslide*<2>{
 \includegraphics[width=.9\textwidth]{langpop_corger_nl}\\
-{\scriptsize Source: \url{http://langpop.corger.nl/}}
+{\scriptsize Source: \url{http://langpop.corger.nl/} (consulted in January 2016)}
 }
+\end{frame}
+
+%--------------------------------------------------------------------------------------------------------------
+\begin{frame}[c]
+\frametitle{Why not use Python?}
+
+
+\begin{enumerate}
+\item Don't have time to learn a new language
+\item Slow as compared to C/C++, Fortran, Julia, \ldots
+\item Memory consumption
+\item Database access
+\end{enumerate}
+
 \end{frame}
 
 
 %--------------------------------------------------------------------------------------------------------------
-\subsection{Python vs. Matlab}
+\subsection{Python vs. MATLAB}
 
 \begin{frame}[fragile]
-\frametitle{Python vs. Matlab}
+\frametitle{Python vs. MATLAB}
 \footnotesize
 
 \begin{table}
 \scriptsize
 \begin{tabular}{p{.4\textwidth}p{.4\textwidth}}
 \toprule
-Python  	  				& Matlab\\
+Python  	  				& MATLAB\\
 \midrule
 \textbf{General}			& \\
 programming language		& programming language + numerical computing environment\\
@@ -91,194 +105,9 @@ Numpy for Matlab users:\\
 
 \end{frame}
 
-
-%--------------------------------------------------------------------------------------------------------------
-\begin{frame}[t, fragile]
-\frametitle{Quick example: hello.py}
-
-{\huge
-\faLaptop
-}
-
-
-\begin{onlyenv}<2>
-\begin{lstlisting}[language=python]
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-'''
-This function prints "Hello world"
-'''
-
-def hello():
-  print "Hello world"
-  return
-
-def main():
-  hello()
-
-if __name__ == '__main__':
-  main()
-\end{lstlisting}
-\end{onlyenv}
-
-{\normalsize
-\begin{enumerate}
-\item<3-> Try to document you code
-\item<4-> Use 
-\begin{lstlisting}[language=python]
-# -*- coding: utf-8 -*- 
-\end{lstlisting}
-if you're using non-ascii characters
-\item<5-> In Python~3: 
-\begin{lstlisting}[language=python]
-print("Hello world!")
-\end{lstlisting}
-\item<6-> Indentation matters!
-\end{enumerate}
-}
-\end{frame}
-
-%--------------------------------------------------------------------------------------------------------------
-\subsection{Definitions and data types}
-\begin{frame}[fragile]
-\frametitle{A few definitions}
-
-\begin{description}
-\item[Object:] Python's abstraction for data\\
-\url{https://docs.python.org/2/reference/datamodel.html#index-0}
-\item[Function:] series of statements which returns some value to a caller\\
-\url{https://docs.python.org/2/glossary.html#term-function}
-\item[Module:] file containing Python definitions and statements\\
-\url{https://docs.python.org/2/tutorial/modules.html}
-\item[Class:] logical grouping of data and methods (functions)\\
-\url{https://docs.python.org/2/tutorial/classes.html}
-\end{description}
-
-\end{frame}
-
-%--------------------------------------------------------------------------------------------------------------
-
-\begin{frame}[t, fragile]
-\frametitle{Data types}
-
-\begin{enumerate}
-\item<1-> Numbers
-\item<2-> String
-\item<3-> List
-\item<4-> Tuple
-\item<5-> Dictionary
-\end{enumerate}
-
-\onslide<1-5>{\textbf{Example:}}
-
-\begin{onlyenv}<1>
-\begin{lstlisting}[language=python]
-g = 9.81
-h = 4.135667662e-15
-\end{lstlisting}
-\end{onlyenv}
-
-\begin{onlyenv}<2>
-\begin{lstlisting}[language=python]
-name = "Rickman"
-s = "this is a string"
-\end{lstlisting}
-\end{onlyenv}
-
-\begin{onlyenv}<3>
-\begin{lstlisting}[language=python]
-list = ['one', 2, 'three', 'four', 5]
-\end{lstlisting}
-\end{onlyenv}
-
-
-\begin{onlyenv}<4>
-\begin{lstlisting}[language=python]
-tuple1 = ('one', 2, 'three', 'four', 5)
-tuple2 = (1, '1', 'one', [1, 2], (1, 2, 3))
-\end{lstlisting}
-
-Tuples are \textit{immutable} \comment{(fixed value)}
-\end{onlyenv}
-
-
-\begin{onlyenv}<5>
-\begin{lstlisting}[language=python]
-email = {'Evan': 'emason@imedea.uib-csic.es',\
-         'Irene': 'irene.laiz@uca.es',\
-         'Charles': 'ctroupin@socib.es'}
-email['Irene']
-'irene.laiz@uca.es'
-\end{lstlisting}
-\end{onlyenv}
-
-\begin{onlyenv}<6>
-More details:\\
-\url{https://docs.python.org/2/tutorial/datastructures.html#}
-
-\vspace{1cm}
-
-{\huge \faLaptop}
-
-\end{onlyenv}
-
-\end{frame}
-
-%--------------------------------------------------------------------------------------------------------------
-\subsection{Resources, tutorials, books}
-\begin{frame}
-\frametitle{Resources}
-
-\onslide*<1>{
-Web:
-\begin{itemize}
-\item \url{https://docs.python.org/2.7/tutorial/index.html}
-\item \url{https://developers.google.com/edu/python/introduction?hl=en} \comment{tutorial + exercises}
-\item \url{http://www.python-course.eu}
-\item \url{http://www.learnpython.org} \comment{online code execution}\\
-\url{https://pythonprogramming.net}
-\item \url{https://www.gitbook.com/book/djangogirls/djangogirls-tutorial} 
-\end{itemize}
-}
-
-\onslide*<2>{
-Learning platforms:
-\begin{itemize}
-\item \href{https://www.udacity.com/course/programming-foundations-with-python--ud036}{
-Programming Foundations with Python
-Learn Object-Oriented Programming} \comment{(7 weeks)}
-\item \href{https://www.codecademy.com/learn/python}{Code Academy} \comment{(13 hours)}
-\end{itemize}
-}
-
-\onslide*<3>{
-Youtube:
-\begin{itemize}
-\item \href{https://www.youtube.com/watch?v=cpPG0bKHYKc}{Python Beginner Tutorial (For Absolute Beginners)}\comment{(4 parts)}
-\item \href{https://www.youtube.com/watch?v=tKTZoB2Vjuk}{Google Python Class} \comment{(7 $\times$ 30 minutes)}
-\item \href{https://www.youtube.com/watch?v=9uq3w6JJS00}{Zero to Hero with Python} \comment{(11 hours)}
-\end{itemize}
-}
-
-\onslide*<4>{
-Books:
-\begin{itemize}
-\item \textit{Learn Python the hard way}, Z.A.~Shaw, 2013\\
-\url{http://learnpythonthehardway.org/book/}
-\item \textit{Learning Python, 5th Edition}, M.~Lutz, 2013
-\item \textit{Python Programming: An Introduction to Computer Science}, J.M. Zelle, 2002 
-\end{itemize}
-
-\vspace{1cm}
-
-Complete list: \url{https://wiki.python.org/moin/PythonBooks}
-}
-
-\end{frame}
-
 %--------------------------------------------------------------------------------------------------------------
 \begin{frame}[fragile]
-\frametitle{Python 2 vs Python 3}
+\frametitle{Python 3 vs Python 2}
 
 Some differences:
 \begin{itemize}
@@ -300,6 +129,248 @@ More details:\\
 
 
 %--------------------------------------------------------------------------------------------------------------
+\begin{frame}[t, fragile]
+\frametitle{Quick example: hello.py}
+
+{\huge
+\faLaptop
+}
+
+
+\begin{onlyenv}<2>
+\begin{lstlisting}[language=python]
+#!/usr/bin/python
+"""
+This function prints "Hello world"
+"""
+
+def hello():
+  print("Hello world")
+  return
+
+def main():
+  hello()
+
+if __name__ == '__main__':
+  main()
+\end{lstlisting}
+\end{onlyenv}
+
+\end{frame}
+
+\subsection{Running your code}
+
+\begin{frame}[fragile, c]
+\frametitle{Running your code: several solutions}
+
+\begin{onlyenv}<1> 
+Edit, then run in a shell:
+\begin{lstlisting}[language=bash]
+$ python mycode.py
+\end{lstlisting}
+or 
+\begin{lstlisting}[language=bash]
+$ mycode.py
+\end{lstlisting}
+if \textit{shebang}
+\begin{lstlisting}[language=python]
+#!/usr/bin/python
+\end{lstlisting}
+is present at the 1st line
+\end{onlyenv}
+
+\begin{onlyenv}<2> 
+Interactive python (\href{http://ipython.org/}{ipython})
+
+Auto-completion, exploring objects, \ldots
+
+\begin{lstlisting}[language=bash]
+In [2]: string = 'Hello all'
+
+In [3]: string.
+string.capitalize  string.encode      string.format      ...
+string.rstrip      string.strip       string.upper       
+... 
+string.startswith  string.translate   
+\end{lstlisting}
+
++ \textit{magic} functions:
+
+{\footnotesize
+\begin{itemize}
+\item[] \verb|%run|: Run the named file inside IPython as a program\\
+\item[] \verb|%timeit|: Time execution of a Python statement or expression\\
+\item[] \verb|%who|: Print all interactive variables, with some minimal formatting
+\end{itemize}
+}
+\vfill
+
+More: \href{http://ipython.readthedocs.org/en/stable/interactive/magics.html?highlight=magic#built-in-magic-commands}{Built-in magic commands}
+\end{onlyenv}
+
+% Add ipython + magic functions + autocomplete etc
+
+\begin{onlyenv}<3> 
+\textit{Integrated Development Environment} (IDE)\\
+(editor + build automation tools + debugger)
+
+\vfill
+\includegraphics[width=.7\textwidth]{python_pycharm}
+\vfill
+
+\textbf{Examples:} Atom, Eclipse, PyCharm, Idle, \ldots\\
+Complete list: \url{https://wiki.python.org/moin/PythonEditors}
+\end{onlyenv}
+
+\begin{onlyenv}<4>
+\href{https://jupyter.org/}{\textit{Jupyter notebook}}\\
+(interactive computational environment)
+
+\vfill
+\includegraphics[width=.7\textwidth]{notebook_insitu0}
+\vfill
+
+Rich text + command executions + figures + \ldots
+
+"\textit{Data story telling}"
+\end{onlyenv}
+
+\end{frame}
+
+%--------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Structure of a notebook}
+
+\begin{columns}[c]
+
+\begin{column}{.8\linewidth}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=.95\textwidth]{notebook_insitu1}};
+    \begin{scope}[x={(image.south east)},y={(image.north west)}]
+		\path (.21,.9) coordinate (play1);
+		\path (.05,.9) coordinate (add1);
+		\path (.35,.9) coordinate (cell1);
+		\path (.05,.65) coordinate (code1);
+		\path (.11,.49) coordinate (text1);
+%		\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+%		\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+%		\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+    \end{scope}  
+     
+\end{tikzpicture}
+
+\end{column}
+
+
+\begin{column}{.25\linewidth}
+
+\scriptsize 
+\onslide<2->{\tikz[na] \coordinate (play2); Run current cell}
+
+\onslide<3->{\tikz[na] \coordinate (add2); Add a new cell}
+
+\onslide<4->{\tikz[na] \coordinate (cell2); Select type of cell}
+
+\onslide<5->{\tikz[na] \coordinate (code2); Code cell}
+
+\onslide<6>{\tikz[na] \coordinate (text2); Text cell}
+
+\end{column}
+
+\end{columns}
+
+\begin{tikzpicture}[overlay]
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+	\onslide<2>{\path[*-stealth,arrowcolor,thin,opacity=0.25] (play1) edge [out=-90, in=180] (play2);}
+	\onslide<3>{\path[*-stealth,arrowcolor,thin,opacity=0.25] (add1) edge [out=-90, in=180] (add2);}
+	\onslide<4>{\path[*-stealth,arrowcolor,thin,opacity=0.25] (cell1) edge [out=-90, in=180] (cell2);}
+	\onslide<5>{\path[*-stealth,arrowcolor,thin,opacity=0.25] (code1) edge [out=0, in=180] (code2);}
+	\onslide<6>{\path[*-stealth,arrowcolor,thin,opacity=0.25] (text1) edge [out=0, in=180] (text2);}
+\end{scope}
+\end{tikzpicture}
+
+\end{frame}
+
+
+%--------------------------------------------------------------------------------------------------------------
+\subsection{Definitions and data types}
+
+%\begin{frame}[fragile]
+%\frametitle{A few definitions}
+%
+%\begin{description}
+%\item[Object:] Python's abstraction for data\\
+%\url{https://docs.python.org/2/reference/datamodel.html#index-0}
+%\item[Function:] series of statements which returns some value to a caller\\
+%\url{https://docs.python.org/2/glossary.html#term-function}
+%\item[Module:] file containing Python definitions and statements\\
+%\url{https://docs.python.org/2/tutorial/modules.html}
+%\item[Class:] logical grouping of data and methods (functions)\\
+%\url{https://docs.python.org/2/tutorial/classes.html}
+%\end{description}
+%
+%\end{frame}
+
+%--------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[c]
+\frametitle{Some data types}
+
+\faLink~\href{../notebooks/Intro/data-types.ipynb}{data-types}
+
+\end{frame}
+
+%--------------------------------------------------------------------------------------------------------------
+\subsection{Resources, tutorials, books}
+\begin{frame}
+\frametitle{Resources}
+
+\onslide*<1>{
+Web
+\begin{itemize}
+\item \url{https://docs.python.org/3/tutorial/}
+\item \url{https://developers.google.com/edu/python/introduction?hl=en} \comment{tutorial + exercises}
+\item \url{http://www.learnpython.org} \comment{online code execution}
+\item \url{https://pythonprogramming.net}
+\end{itemize}
+}
+
+\onslide*<2>{
+Learning platforms
+\begin{itemize}
+\item \href{https://www.udacity.com/course/introduction-to-python--ud1110}{
+Introduction to Python Programming} \comment{(5 weeks)}
+\item \href{https://www.codecademy.com/learn/python}{Code Academy} \comment{(25 hours)}
+\end{itemize}
+}
+
+\onslide*<3>{
+\faYoutube
+\begin{itemize}
+\item \href{https://www.youtube.com/watch?v=cpPG0bKHYKc}{Python Beginner Tutorial (For Absolute Beginners)}\comment{(4 parts)}
+\item \href{https://www.youtube.com/watch?v=9uq3w6JJS00}{Zero to Hero with Python} \comment{(11 hours)}
+\end{itemize}
+}
+
+\onslide*<4>{
+\faBook
+\begin{itemize}
+\item \textit{Learn Python the hard way}, Z.A.~Shaw, 2013\\
+\url{http://learnpythonthehardway.org/book/}
+\item \textit{Learning Python, 5th Edition}, M.~Lutz, 2013
+\item \textit{Python Programming: An Introduction to Computer Science}, J.M. Zelle, 2002 
+\end{itemize}
+
+\vspace{1cm}
+
+Complete list: \url{https://wiki.python.org/moin/PythonBooks}
+}
+
+\end{frame}
+
+
+%--------------------------------------------------------------------------------------------------------------
 
 \begin{frame}[fragile]
 \frametitle{Objectives of the course}
@@ -308,12 +379,12 @@ More details:\\
 \item<1-> Use Python to solve oceanography-related problems
 \item<2-> Read/write various types of files
 \item<3-> Generate high-quality figures
-\item<4-> Find resources on the internet for specific problems
+\item<4-> Find resources to solve specific issues
 \end{enumerate}
 
 \vspace{.5cm}
 
-\onslide<5->{\textbf{What we won't (can't) do:}\\
+\onslide<5->{\textbf{What we won't do:}\\
 teach you how to be a good programmer}
 
 \end{frame}
@@ -323,12 +394,15 @@ teach you how to be a good programmer}
 \begin{frame}
 \frametitle{About the trainers}
 
+\faLink~\href{../notebooks/Intro/teacher-map.ipynb}{teacher-map}
+
+\vspace{.2cm}
 
 % maybe add pictures
-\onslide<1->{\textbf{Evan Mason}\\
+\onslide<1->{\textbf{Arthur Capet}\\
 Oceanographer\\
-Post-doctoral researcher at \href{http://imedea.uib-csic.es/}{IMEDEA}\\
-10-year experience with Python
+Post-doctoral researcher at \href{http://labos.ulg.ac.be/mast/}{MAST}\\
+4-year experience with Python
 
 }
 
@@ -336,30 +410,28 @@ Post-doctoral researcher at \href{http://imedea.uib-csic.es/}{IMEDEA}\\
 
 \onslide<2->{\textbf{Charles Troupin}\\
 Engineer, oceanographer\\
-Head of \href{http://socib.es/}{SOCIB} Data Center\\
-2.5-year experience with Python
+Post-doctoral researcher at \href{http://labos.ulg.ac.be/gher/}{GHER}\\
+7-year experience with Python
 }
-
-
 
 \end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
 
 \begin{frame}[t]
-\frametitle{Structure of the course}
+\frametitle{Content of the course}
 
 \begin{enumerate}
-\item<1-> Reading/writing
-\item<2-> Time series 
-\item<3-> 2-D fields
+\item<1-> Reading/writing data files
+\item<2-> Working with time series 
+\item<3-> Plotting 2-D fields
 \item<4-> Functions, classes, modules
 \end{enumerate}
 
 \vspace{1cm}
 
-\includegraphics<1->[height=1.5cm]{python_idle2}~\includegraphics<2->[height=1.5cm]{IR_TS_MO_61198_monthly}~\includegraphics<3->[height=1.5cm]{anomalies_10profiler-glider_201507}~\includegraphics<4->[height=1.5cm]{eddy_tracking_ex}
-
+\includegraphics<1->[height=2cm]{python_idle2}~\includegraphics<2->[height=2cm]{IR_TS_MO_61198_monthly}\\
+\includegraphics<3->[height=2cm]{anomalies_10profiler-glider_201507}~\includegraphics<4->[height=2cm]{eddy_tracking_ex}
 
 \end{frame}
 
