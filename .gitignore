@@ -11,6 +11,11 @@
 *.cb
 *.cb2
 .*.lb
+*.nav
+*.snm
+*.vrb
+*/.ipynb_checkpoints/
+notebooks/Advanced/.ipynb_checkpoints/
 
 ## Intermediate documents:
 *.dvi
