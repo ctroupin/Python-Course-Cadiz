@@ -26,12 +26,12 @@
 \item Windows: \url{https://www.python.org/downloads/windows/}
 \item Mac OS: \url{https://www.python.org/downloads/mac-osx/}
 \item Linux: package manager:\\
-python2.x and python2.x-dev packages
+python3.x and python3.x-dev packages
 \end{itemize}
 
 \item<3->[Easy way:] Python distributions such as:\\
-\href{https://www.continuum.io/downloads}{Anaconda} \comment{free}\\
-\href{https://www.enthought.com/products/canopy/}{Enthought Canopy} \comment{free and commercial}\\
+\href{https://www.anaconda.com/distribution/}{Anaconda} \comment{free}\\
+\href{https://assets.enthought.com/downloads/}{Enthought Canopy} \comment{free and commercial}\\
 \href{http://python-xy.github.io/}{Python(x,y)} \comment{free, Windows only}\\
 + others
 
@@ -41,14 +41,14 @@ python2.x and python2.x-dev packages
 
 %--------------------------------------------------------------------------------------------------------------
 \begin{frame}[fragile]
-\frametitle{Installing modules}
+\frametitle{Installing modules~\faWrench}
 
-Example: SciPy (\url{http://www.scipy.org/}):\\
+Example: SciPy (\url{https://www.scipy.org/install.html}):\\
 mathematics, science, and engineering
 
 \begin{description}
 \item<2->[Easy way:] Windows, Linux, Mac:\\
-use Scientific Python distribution
+use Scientific Python distribution\comment{(ex: Anaconda)}
 \item<3->[Intermediate:] Linux, Mac: install package\\
 \begin{itemize}
 \item Linux: package manager
@@ -56,10 +56,10 @@ use Scientific Python distribution
 \end{itemize}
 \item<4->[Harder:] build from source
 \begin{lstlisting}[language=bash]
- $ python setup.py install
+python setup.py install
 \end{lstlisting}
 \item<5->[Better:] pip (\url{https://pypi.python.org/pypi/pip})
-\item<6->[Avoid:] mixing installation methods
+\item<6->[\faWarning~Avoid:] mixing installation methods
 
 \end{description}
 
@@ -79,7 +79,7 @@ use Scientific Python distribution
 \item Otherwise: download and run \pyfile{get-pip.py}\\
 \url{https://pip.pypa.io/en/stable/installing/\#install-pip}
 \begin{lstlisting}[language=bash]
-$ python get-pip.py
+python get-pip.py
 \end{lstlisting}
 \end{itemize}
 
@@ -87,16 +87,16 @@ $ python get-pip.py
 \begin{itemize}
 \item Install latest version + dependencies:
 \begin{lstlisting}[language=bash]
-$ pip install Package
+pip install PackageName
 \end{lstlisting}
 
 \item Specify exact version:
 \begin{lstlisting}[language=bash]
-$ pip install Package==x.y.z
+pip install PackageName==x.y.z
 \end{lstlisting}
 \item Specify minimum version:
 \begin{lstlisting}[language=bash]
-$ pip install 'Package>=x.y.z'
+pip install 'PackageName>=x.y.z'
 \end{lstlisting}
 \end{itemize}
 
@@ -112,86 +112,77 @@ $ pip install 'Package>=x.y.z'
 \begin{itemize}
 \item<1-> Uninstall packages:                   
 \begin{lstlisting}[language=bash]
-$ pip uninstall
+pip uninstall PackageName
 \end{lstlisting}
 \item<2->List installed packages:
 \begin{lstlisting}[language=bash]
-$ pip list
+pip list
 \end{lstlisting}
 
 \begin{onlyenv}<2>
+Output:
 \tiny
 \begin{lstlisting}[language=bash]
-aptoncd (0.1.98-bzr117-1.2)
-backports.ssl-match-hostname (3.4.0.2)
-basemap (1.0.7)
+Package          Version    
+---------------- -----------
+asn1crypto       0.24.0     
+Cartopy          0.17.0     
+certifi          2019.6.16  
+cffi             1.12.3    
 ...
-xhtml2pdf (0.0.6)
-zope.interface (3.6.1)
 \end{lstlisting}
 \end{onlyenv}
 
 
-\item<3-> Output installed packages in requirements format:
+\item<3-> List installed packages in requirements format:
 \begin{lstlisting}[language=bash]
-$ pip freeze
+pip freeze
 \end{lstlisting}
 
 \begin{onlyenv}<3>
+Output:
 \tiny
 \begin{lstlisting}[language=bash]
-aptoncd===0.1.98-bzr117-1.2
-backports.ssl-match-hostname==3.4.0.2
-basemap==1.0.7
-
+asn1crypto==0.24.0
+Cartopy==0.17.0
 ...
-xhtml2pdf==0.0.6
-zope.interface==3.6.1
+tornado==6.0.3
+urllib3==1.25.3
 \end{lstlisting}
 \end{onlyenv}
+\end{itemize}
+\end{frame}
 
-\item<4-> Show information about installed packages:
+
+%--------------------------------------------------------------------------------------------------------------
+\begin{frame}[t, fragile]
+\frametitle{More about \texttt{pip}}
+
+\begin{itemize}
+\item<1-> Show information about installed packages:
 \begin{lstlisting}[language=bash]
-$ pip show Package
+pip show PackageName
 \end{lstlisting}
 
-\begin{onlyenv}<4>
+\begin{onlyenv}<1>
 \tiny
 \begin{lstlisting}[language=bash]
-Metadata-Version: 1.1
+ctroupin@GHER-ULg-Laptop ~ $ pip show numpy
 Name: numpy
-Version: 1.9.2
-Summary: NumPy: array processing for numbers, strings, ...
-...
-Requires:
+Version: 1.17.1
+Summary: NumPy is the fundamental package for array computing with Python.
+Home-page: https://www.numpy.org
+Author: Travis E. Oliphant et al.
+Author-email: None
+License: BSD
+Location: /home/ctroupin/miniconda3/lib/python3.7/site-packages
+Requires: 
+Required-by: scipy, pykdtree, matplotlib, Cartopy
 \end{lstlisting}
 \end{onlyenv}
 
 \end{itemize}
 
-\end{frame}
-
-%--------------------------------------------------------------------------------------------------------------
-%\begin{frame}[fragile]
-%\frametitle{Managing modules with Anaconda}
-%
-%http://conda.pydata.org/docs/using/pkgs.html
-%
-%
-%\end{frame}
-
-%--------------------------------------------------------------------------------------------------------------
-
-
-%--------------------------------------------------------------------------------------------------------------
-\begin{frame}[c]
-\frametitle{What do we work with?}
-\huge
-\faLaptop
-
-\vfill 
-
-% Here we will say what we use personaly, type of workflow etc
 \end{frame}
 
 %--------------------------------------------------------------------------------------------------------------
@@ -212,7 +203,7 @@ Write a program that takes 2 arguments: the name and the surname, both written w
 
 \textbf{Tips:} use the function \href{https://docs.python.org/2/library/sys.html#sys.argv}{sys.argv} to be able to run the code as 
 \begin{lstlisting}[language=bash]
-$ changecase name surname
+changecase name surname
 \end{lstlisting}
 
 
